@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Royal Palace Hotel Packages</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f8f9fa;
+}
+
+.package-card{
+transition:0.3s;
+}
+
+.package-card:hover{
+transform:translateY(-10px);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+footer{
+background:#111;
+color:white;
+padding:25px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">Royal Palace Hotel</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+<li class="nav-item"><a href="booking.html" class="nav-link">Booking</a></li>
+<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+<li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+<li class="nav-item"><a href="signup.html" class="nav-link">Sign Up</a></li>
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="bg-light text-center p-5">
+
+<h1>Special Hotel Packages</h1>
+
+<p>Discover exclusive luxury offers designed for comfort and relaxation.</p>
+
+</section>
+
+
+<!-- PACKAGES -->
+
+<section class="container mt-5">
+
+<div class="row g-4">
+
+
+<!-- Weekend Package -->
+
+<div class="col-md-4">
+
+<div class="card package-card shadow">
+
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+class="card-img-top">
+
+<div class="card-body">
+
+<h5>Weekend Luxury Package</h5>
+
+<p>Relax and enjoy a premium weekend stay experience.</p>
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#weekendPackage">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Family Package -->
+
+<div class="col-md-4">
+
+<div class="card package-card shadow">
+
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+class="card-img-top">
+
+<div class="card-body">
+
+<h5>Family Vacation Offer</h5>
+
+<p>Perfect package for families with exciting activities.</p>
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#familyPackage">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Business Package -->
+
+<div class="col-md-4">
+
+<div class="card package-card shadow">
+
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+class="card-img-top">
+
+<div class="card-body">
+
+<h5>Business Travel Plan</h5>
+
+<p>Designed for professionals with comfort and productivity.</p>
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#businessPackage">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- WEEKEND PACKAGE POPUP -->
+
+<div class="modal fade" id="weekendPackage">
+
+<div class="modal-dialog modal-lg">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h4 class="modal-title">Weekend Luxury Package</h4>
+
+<button class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<div class="row">
+
+<div class="col-md-6">
+
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+class="img-fluid rounded">
+
+</div>
+
+<div class="col-md-6">
+
+<h5>Price: ₹12,999 / Night</h5>
+
+<p>
+Enjoy a relaxing weekend with luxury accommodation,
+complimentary breakfast, and spa access.
+</p>
+
+<h6>Package Includes</h6>
+
+<ul>
+
+<li>Luxury Room Stay</li>
+<li>Free Breakfast Buffet</li>
+<li>Spa Access</li>
+<li>Swimming Pool Access</li>
+<li>Late Checkout</li>
+
+</ul>
+
+<a href="booking.html" class="btn btn-primary">
+Book Package
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FAMILY PACKAGE POPUP -->
+
+<div class="modal fade" id="familyPackage">
+
+<div class="modal-dialog modal-lg">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h4 class="modal-title">Family Vacation Package</h4>
+
+<button class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<h5>Price: ₹15,999 / Night</h5>
+
+<p>
+Perfect vacation package designed for families
+with spacious rooms and fun activities.
+</p>
+
+<ul>
+
+<li>Family Room Stay</li>
+<li>Free Breakfast</li>
+<li>Kids Activity Zone</li>
+<li>Swimming Pool Access</li>
+
+</ul>
+
+<a href="booking.html" class="btn btn-primary">
+Book Package
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BUSINESS PACKAGE POPUP -->
+
+<div class="modal fade" id="businessPackage">
+
+<div class="modal-dialog modal-lg">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h4 class="modal-title">Business Travel Plan</h4>
+
+<button class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<h5>Price: ₹10,999 / Night</h5>
+
+<p>
+Designed for business travelers with comfortable
+workspace and high-speed internet.
+</p>
+
+<ul>
+
+<li>Executive Room Stay</li>
+<li>High Speed WiFi</li>
+<li>Meeting Room Access</li>
+<li>Complimentary Breakfast</li>
+
+</ul>
+
+<a href="booking.html" class="btn btn-primary">
+Book Package
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="text-center">
+
+<h5>Royal Palace Hotel</h5>
+
+<p>Luxury Stay Experience</p>
+
+<p>📍 Chandigarh | 📞 +91 7876XXXXX | 📧 info@royalpalace.com</p>
+
+<p>© 2026 Royal Palace Hotel</p>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

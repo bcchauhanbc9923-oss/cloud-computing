@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Palace Hotel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{font-family:'Segoe UI',sans-serif;}
+.hero{
+background:url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
+background-size:cover;
+background-position:center;
+height:90vh;
+display:flex;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.5);
+width:100%;
+padding:80px;
+}
+.room-card:hover{transform:translateY(-10px);}
+.room-card{transition:0.3s;}
+.stats{background:#f8f9fa;padding:50px 0;}
+.review-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.offer-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.offer-box:hover{transform:translateY(-5px);}
+
+footer{
+background:#111;
+color:white;
+padding:30px;
+margin-top:40px;
+}
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold">Royal Palace</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+<li class="nav-item"><a href="about.html" class="nav-link active"> About</a></li>
+<li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+<li class="nav-item"><a href="booking.html" class="nav-link">Booking</a></li>
+<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+<li class="nav-item" id="loginNav">
+    <a href="login.html" class="nav-link">Login</a>
+</li>
+
+<li class="nav-item" id="signupNav">
+    <a href="signup.html" class="nav-link">Sign Up</a>
+</li>
+
+<li class="nav-item d-none" id="logoutNav">
+    <a href="#" class="nav-link" onclick="logoutUser()">Logout</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="hero-overlay">
+<h1 class="display-4 fw-bold">Luxury Stay Experience</h1>
+<p class="lead">Enjoy world-class hospitality, comfort, and unforgettable moments.</p>
+<a href="booking.html" class="btn btn-primary btn-lg">Book Your Stay</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="container mt-5">
+<div class="row align-items-center">
+
+<div class="col-md-6">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" class="img-fluid rounded shadow">
+</div>
+<div class="col-md-6">
+<h2>About Royal Palace Hotel</h2>
+<p>
+Royal Palace Hotel is a premium destination offering luxury, comfort, and elegance.
+With beautifully designed interiors and modern amenities, we ensure every guest
+experiences relaxation and satisfaction.
+</p>
+<p>
+Whether you are traveling for business, vacation, or special occasions,
+our hotel provides a peaceful and luxurious environment.
+</p>
+</div>
+</div>
+</section>
+
+<!-- ROOMS -->
+<section class="container mt-5">
+<h2 class="text-center mb-4">Our Luxury Rooms</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card room-card shadow">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" class="card-img-top">
+<div class="card-body text-center">
+<h5>Deluxe Room</h5>
+<p>Modern room with all essential facilities.</p>
+<h6>₹9,999 / Night</h6>
+<a href="rooms.html" class="btn btn-primary">View Details</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card room-card shadow">
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" class="card-img-top">
+<div class="card-body text-center">
+<h5>Luxury Suite</h5>
+<p>Premium suite with balcony and luxury amenities.</p>
+<h6>₹16,499 / Night</h6>
+<a href="rooms.html" class="btn btn-primary">View Details</a>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card room-card shadow">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" class="card-img-top">
+<div class="card-body text-center">
+<h5>Family Room</h5>
+<p>Spacious room designed for family comfort.</p>
+<h6>₹14,999 / Night</h6>
+<a href="rooms.html" class="btn btn-primary">View Details</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FACILITIES -->
+
+<section class="container mt-5 text-center">
+<h2 class="mb-4">Facilities & Services</h2>
+<div class="row g-4">
+<div class="col-md-3"><h5>Free WiFi</h5><p>Fast internet in all rooms</p></div>
+<div class="col-md-3"><h5>Swimming Pool</h5><p>Relax in luxury pool</p></div>
+<div class="col-md-3"><h5>Restaurant</h5><p>Delicious cuisines</p></div>
+<div class="col-md-3"><h5>Gym</h5><p>Modern fitness center</p></div>
+</div>
+</section>
+
+<!-- OFFERS -->
+
+<section class="container mt-5">
+<h2 class="text-center mb-4">Special Offers</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="offer-box">
+<h5>15% Discount</h5>
+<p>Valid till April 2026</p>
+<ul>
+<li>Free breakfast</li>
+<li>Early check-in</li>
+<li>All room types</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="offer-box">
+<h5>Family Package</h5>
+<p>20% discount</p>
+<ul>
+<li>Free kids meal</li>
+<li>Extra bed</li>
+<li>Pool access</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="offer-box">
+<h5>Business Offer</h5>
+<p>10% discount</p>
+<ul>
+<li>Meeting room</li>
+<li>Airport pickup</li>
+<li>Free WiFi</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCES -->
+
+<section class="bg-light p-5 mt-5 text-center">
+<h2>Experiences at Royal Palace</h2>
+
+<div class="row mt-4">
+<div class="col-md-3"><h5>Spa</h5><p>Relax & refresh</p></div>
+<div class="col-md-3"><h5>Dining</h5><p>Luxury food</p></div>
+<div class="col-md-3"><h5>Events</h5><p>Wedding & parties</p></div>
+<div class="col-md-3"><h5>Views</h5><p>Beautiful scenery</p></div>
+</div>
+</section>
+
+<!-- STATS -->
+
+<section class="stats text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-3"><h2>500+</h2><p>Guests</p></div>
+<div class="col-md-3"><h2>50</h2><p>Rooms</p></div>
+<div class="col-md-3"><h2>20</h2><p>Staff</p></div>
+<div class="col-md-3"><h2>10+</h2><p>Years</p></div>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+
+<section class="container mt-5">
+<h2 class="text-center mb-4">Customer Reviews</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="review-card">
+<p>"Amazing experience and friendly staff."</p>
+<h6>Rahul ⭐⭐⭐⭐⭐</h6>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="review-card">
+<p>"Very clean and comfortable rooms."</p>
+<h6>Priya ⭐⭐⭐⭐⭐</h6>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="review-card">
+<p>"Best luxury stay at affordable price."</p>
+<h6>Aman ⭐⭐⭐⭐</h6>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+
+<section class="bg-dark text-white text-center p-5 mt-5">
+<h2>Ready to Experience Luxury?</h2>
+<p>Book your stay now</p>
+<a href="booking.html" class="btn btn-warning btn-lg">Book Now</a>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="text-center">
+<h5>Royal Palace Hotel</h5>
+<p>📍 Chandigarh | 📞 +91 7876XXXXXXX</p>
+<p>© 2026 Royal Palace Hotel</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    document.getElementById("loginNav").classList.toggle("d-none", isLoggedIn);
+    document.getElementById("signupNav").classList.toggle("d-none", isLoggedIn);
+    document.getElementById("logoutNav").classList.toggle("d-none", !isLoggedIn);
+
+});
+
+function logoutUser() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

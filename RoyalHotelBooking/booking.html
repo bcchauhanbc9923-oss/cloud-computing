@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Room - Royal Hotel</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    font-family: Arial;
+    background: #f8f9fa;
+}
+
+.booking-header {
+    background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.booking-form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">Royal Hotel</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+    <a href="index.html" class="nav-link">Home</a>
+</li>
+
+<li class="nav-item">
+    <a href="about.html" class="nav-link">About</a>
+</li>
+
+<li class="nav-item">
+    <a href="rooms.html" class="nav-link">Rooms</a>
+</li>
+
+<li class="nav-item">
+    <a href="gallery.html" class="nav-link">Gallery</a>
+</li>
+
+<li class="nav-item">
+    <a href="booking.html" class="nav-link active">Booking</a>
+</li>
+
+<li class="nav-item">
+    <a href="contact.html" class="nav-link">Contact</a>
+</li>
+
+<li class="nav-item" id="loginNav">
+    <a href="login.html" class="nav-link">Login</a>
+</li>
+
+<li class="nav-item" id="signupNav">
+    <a href="signup.html" class="nav-link">Sign Up</a>
+</li>
+
+<li class="nav-item d-none" id="logoutNav">
+    <a href="#" class="nav-link" onclick="logoutUser()">Logout</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HEADER -->
+<section class="booking-header">
+<h1>Book Your Stay</h1>
+<p>Experience comfort, luxury, and world-class hospitality.</p>
+</section>
+
+<!-- BOOKING FORM -->
+<div class="container mt-5">
+
+<h2 class="text-center mb-4">Room Reservation</h2>
+
+<form id="bookingForm" class="booking-form p-4">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+    <label>Full Name</label>
+    <input type="text" name="name" class="form-control" required>
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Email</label>
+    <input type="email" name="email" class="form-control" required>
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Phone</label>
+    <input type="tel" name="phone" class="form-control">
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Guests</label>
+    <input type="number" name="guests" class="form-control" min="1" max="20" value="1" required>
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Check-In</label>
+    <input type="date" name="checkin" class="form-control" required>
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Check-Out</label>
+    <input type="date" name="checkout" class="form-control" required>
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Room Type</label>
+    <select name="room" class="form-control" required>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Luxury Suite">Luxury Suite</option>
+        <option value="Family Room">Family Room</option>
+    </select>
+</div>
+
+<div class="col-md-6 mb-3">
+    <label>Special Request</label>
+    <input type="text" name="request" class="form-control">
+</div>
+
+</div>
+
+<button type="submit" class="btn btn-primary w-100">
+    Confirm Booking
+</button>
+
+</form>
+</div>
+
+<!-- BOOKING INFORMATION -->
+<div class="container mt-5">
+
+<h2 class="text-center mb-4">Booking Information</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="info-card">
+    <h5>Booking Policy</h5>
+    <p>Valid ID required. Booking confirmed after verification.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+    <h5>Security</h5>
+    <p>24/7 CCTV, secured entry and sanitized rooms.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="info-card">
+    <h5>Refund</h5>
+    <p>Free cancellation before 24 hours of check-in.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- EXTRA SERVICES -->
+<div class="container mt-5">
+
+<h2 class="text-center mb-4">Our Services</h2>
+
+<div class="row g-4 text-center">
+
+<div class="col-md-3">
+<div class="service-box">
+    <h5>🍽 Restaurant</h5>
+    <p>Luxury dining experience</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="service-box">
+    <h5>🏊 Pool</h5>
+    <p>Infinity pool access</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="service-box">
+    <h5>💆 Spa</h5>
+    <p>Relax & rejuvenate</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="service-box">
+    <h5>🎉 Events</h5>
+    <p>Weddings & parties</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade" id="successModal" tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header bg-success text-white">
+    <h5 class="modal-title">Booking Confirmed 🎉</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body text-center">
+    <p>Your booking is successful!</p>
+    <div id="bookingDetails"></div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+        OK
+    </button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+<p>© 2026 Royal Hotel Booking System</p>
+</footer>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- BOOKING SCRIPT -->
+<script>
+
+const bookingForm = document.getElementById("bookingForm");
+
+bookingForm.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    // CHECK LOGIN
+    const token = localStorage.getItem("royalHotelToken");
+
+    if (!token) {
+        alert("Please login before making a booking.");
+        window.location.href = "login.html?next=booking.html";
+        return;
+    }
+
+    // GET FORM DATA
+    const formData = new FormData(this);
+
+    const payload = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        guests: Number(formData.get("guests")),
+        checkin: formData.get("checkin"),
+        checkout: formData.get("checkout"),
+        room: formData.get("room"),
+        request: formData.get("request")
+    };
+
+    try {
+
+        // SEND BOOKING TO BACKEND
+        const response = await fetch("/api/bookings", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        // CHECK AUTHENTICATION
+        if (response.status === 401 || response.status === 403) {
+
+            localStorage.removeItem("royalHotelToken");
+            localStorage.removeItem("royalHotelUser");
+            localStorage.removeItem("isLoggedIn");
+
+            alert("Your login session has expired. Please login again.");
+
+            window.location.href = "login.html";
+            return;
+        }
+
+        // CHECK BOOKING RESPONSE
+        if (!response.ok) {
+            throw new Error(result.error || result.message || "Booking failed");
+        }
+
+        // SHOW SUCCESS DETAILS
+        document.getElementById("bookingDetails").textContent =
+            `Booking successful! Name: ${result.name}, Email: ${result.email}, Room: ${result.room}`;
+
+        // REDIRECT AFTER MODAL CLOSES
+        const modalElement = document.getElementById("successModal");
+
+        modalElement.addEventListener("hidden.bs.modal", function () {
+            window.location.href = "index.html";
+        }, { once: true });
+
+        const modal = new bootstrap.Modal(modalElement);
+
+        modal.show();
+
+        bookingForm.reset();
+
+    } catch (error) {
+
+        console.error("Booking Error:", error);
+
+        alert("Booking failed: " + error.message);
+    }
+
+});
+
+</script>
+
+<!-- NAVBAR LOGIN / LOGOUT -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const isLoggedIn = !!localStorage.getItem("royalHotelToken");
+
+    document.getElementById("loginNav").classList.toggle("d-none", isLoggedIn);
+
+    document.getElementById("signupNav").classList.toggle("d-none", isLoggedIn);
+
+    document.getElementById("logoutNav").classList.toggle("d-none", !isLoggedIn);
+
+});
+
+function logoutUser() {
+
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("royalHotelToken");
+    localStorage.removeItem("royalHotelUser");
+
+    window.location.href = "login.html";
+}
+
+</script>
+
+</body>
+</html>

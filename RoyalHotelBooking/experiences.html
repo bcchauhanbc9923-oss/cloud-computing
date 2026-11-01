@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiences | Royal Palace Hotel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f8f9fa;
+}
+/* HERO */
+.hero{
+background-image:url("https://images.unsplash.com/photo-1501117716987-c8e1ecb210b9");
+background-size:cover;
+background-position:center;
+height:60vh;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.5);
+padding:60px;
+width:100%;
+}
+
+/* EXPERIENCE CARDS */
+.experience-card{
+transition:0.3s;
+}
+.experience-card:hover{
+transform:translateY(-10px);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+/* CTA */
+.cta{
+background:#111;
+color:white;
+padding:60px 20px;
+text-align:center;
+margin-top:50px;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+padding:30px;
+margin-top:40px;
+}
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">Royal Palace</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+<li class="nav-item"><a href="experiences.html" class="nav-link active">Experiences</a></li>
+<li class="nav-item"><a href="booking.html" class="nav-link">Booking</a></li>
+<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+<li class="nav-item" id="loginNav">
+    <a href="login.html" class="nav-link">Login</a>
+</li>
+
+<li class="nav-item" id="signupNav">
+    <a href="signup.html" class="nav-link">Sign Up</a>
+</li>
+
+<li class="nav-item d-none" id="logoutNav">
+    <a href="#" class="nav-link" onclick="logoutUser()">Logout</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+<div class="hero-overlay">
+<h1 class="display-4 fw-bold">Experiences at Royal Palace Hotel</h1>
+<p class="lead">
+Discover luxury dining, relaxing spa treatments, beautiful views,
+and unforgettable celebrations.
+</p>
+</div>
+</section>
+
+
+<!-- EXPERIENCES -->
+
+<section class="container mt-5">
+<h2 class="text-center mb-5">Explore Our Experiences</h2>
+<div class="row g-4">
+
+
+<!-- Dining -->
+
+<div class="col-lg-4 col-md-6">
+<div class="card experience-card shadow">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" class="card-img-top">
+<div class="card-body">
+
+<h4>Fine Dining</h4>
+<p>
+Enjoy delicious cuisines prepared by expert chefs.
+Our restaurant offers international and local dishes
+in a luxurious dining environment.
+</p>
+
+<ul>
+<li>Multi-Cuisine Restaurant</li>
+<li>Buffet Breakfast</li>
+<li>Private Dining Area</li>
+<li>Chef Special Menus</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<!-- Scenic Views -->
+
+<div class="col-lg-4 col-md-6">
+<div class="card experience-card shadow">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" class="card-img-top">
+<div class="card-body">
+<h4>Scenic Views</h4>
+
+<p>
+Relax and enjoy breathtaking views from our balconies
+and rooftop terrace areas.
+</p>
+
+<ul>
+<li>Garden Views</li>
+<li>Sunset Terrace</li>
+<li>Balcony Seating</li>
+<li>Photography Spots</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<!-- Weddings -->
+<div class="col-lg-4 col-md-6">
+<div class="card experience-card shadow">
+<img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622" class="card-img-top">
+<div class="card-body">
+<h4>Weddings & Events</h4>
+<p>
+Celebrate weddings, birthdays, and corporate events
+in our elegant banquet halls.
+</p>
+<ul>
+<li>Luxury Wedding Venues</li>
+<li>Corporate Meetings</li>
+<li>Birthday Celebrations</li>
+<li>Conference Facilities</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Spa -->
+<div class="col-lg-4 col-md-6">
+<div class="card experience-card shadow">
+<img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874" class="card-img-top">
+<div class="card-body">
+<h4>Spa & Wellness</h4>
+<p>
+Relax your body and mind with our premium spa
+treatments and wellness therapies.
+</p>
+
+<ul>
+<li>Massage Therapy</li>
+<li>Steam & Sauna</li>
+<li>Relaxation Rooms</li>
+<li>Professional Therapists</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<!-- Swimming Pool -->
+
+<div class="col-lg-4 col-md-6">
+<div class="card experience-card shadow">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" class="card-img-top">
+<div class="card-body">
+<h4>Luxury Swimming Pool</h4>
+<p>
+Enjoy refreshing moments at our outdoor pool
+with beautiful lighting and relaxing poolside seating.
+</p>
+<ul>
+<li>Outdoor Pool</li>
+<li>Poolside Lounge</li>
+<li>Evening Lighting</li>
+<li>Refreshment Bar</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<!-- Fitness -->
+
+<div class="col-lg-4 col-md-6">
+<div class="card experience-card shadow">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" class="card-img-top">
+<div class="card-body">
+<h4>Fitness Center</h4>
+<p>
+Stay active during your stay with our modern
+fitness equipment and wellness programs.
+</p>
+<ul>
+<li>Modern Gym Equipment</li>
+<li>Yoga Sessions</li>
+<li>Personal Trainers</li>
+<li>Healthy Lifestyle Programs</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA SECTION -->
+
+<section class="cta">
+<h2>Ready to Experience Luxury?</h2>
+<p>Book your stay at Royal Palace Hotel and enjoy premium hospitality.</p>
+<a href="booking.html" class="btn btn-warning btn-lg">
+Book Your Stay
+</a>
+</section>
+<!-- FOOTER -->
+
+<footer class="text-center">
+<h5>Royal Palace Hotel</h5>
+<p>Luxury Stay Experience</p>
+<p>📍 Chandigarh | 📞 +91 7876XXXXX | 📧 info@royalpalace.com</p>
+<p>© 2026 Royal Palace Hotel</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    document.getElementById("loginNav").classList.toggle("d-none", isLoggedIn);
+    document.getElementById("signupNav").classList.toggle("d-none", isLoggedIn);
+    document.getElementById("logoutNav").classList.toggle("d-none", !isLoggedIn);
+
+});
+
+function logoutUser() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+
+</html>
